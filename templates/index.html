@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>
+	DESAFIO UFF STI
+</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+	<h3>Desafio UFF STI</h3>
+	<h5>Cálculo do CR dos alunos e a média do CR de cada curso no arquivo .csv</h5>
+	<div class="cralunos">
+		<table>
+			<caption><h4>O CR dos alunos é:</h4></caption>
+			<tr>
+				<td>Matrícula</td>
+				<td>CR</td>
+			</tr>
+			{% for item in alunos_cr %}
+			<tr>
+				<td>{{ item[0] }}</td>
+				<td>{{ item[1] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+	<div class="crcursos">
+		<table>
+			<caption><h4>Média de CR por curso:</h4></caption>
+			<tr>
+				<td>Código do Curso</td>
+				<td>CR médio</td>
+			</tr>
+			{% for item in cursos_cr %}
+			<tr>
+				<td>{{ item[0] }}</td>
+				<td>{{ item[1] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}
