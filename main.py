@@ -1,16 +1,26 @@
 from modulos.Desafio import *
 
-def main():
-	lista_alunos, lista_cursos = carregar_dados("./dataset/notas.csv")
+### As funções utilizadas na main() estão no arquivo Desafio.py
 
-	print(" ----------------- O CR DOS ALUNOS É: ----------------- ")
-	imprime_cr_alunos(lista_alunos)
+def main():
+
+	### Gera as listas com os objetos referentes
+	alunos, cursos, disciplinas = carregar_dados("./dataset/notas.csv")
+
+	print(" ------ O CR dos alunos é: ------ ")
+	print(" -------- aluno - CR ------------ ")
+	for aluno in alunos:
+		cr = cr_aluno(aluno,disciplinas)
+		print(f'{aluno.matricula:15} - {cr}')
 
 	#############################################
 
-	print(" ------------------------------------------------------ ")
-	print(" ------------- A MEDIA DE CR POR CURSO É: ------------- ")
-	imprime_media_cr(lista_cursos,lista_alunos)
+	print(" -------------------------------- ")
+	print(" ---- Média de CR por curso: ---- ")
+	print(" -------- curso - media --------- ")
+	for curso in cursos:
+		media = media_cr_curso(curso, alunos, disciplinas)
+		print(f'{curso.cod_curso:15} - {media}')
 
 if __name__ == "__main__":
     main()

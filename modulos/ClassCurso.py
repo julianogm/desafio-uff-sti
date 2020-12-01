@@ -1,37 +1,37 @@
-### Cada objeto curso tera seu identificador unico, e tera uma lista de objetos
-### disciplina associado a ele
+### Cada objeto curso tera seu identificador único,
+### além uma lista de matrículas associadas a ele
 class Curso(object):
     def __init__(self, id_curso):
         self.__id_curso = id_curso
-        self.__disciplinas_curso = []
+        self.__alunos = []
 
-    ### retorna o codigo do curso
+    ### Retorna o código do curso
     @property
     def cod_curso(self):
         return self.__id_curso
 
-    ### retorna a lista de objetos disciplina associadas ao curso
+    ### Retorna todas as matriículas dos alunos do curso
     @property
-    def disciplinas_curso(self):
-        return self.__disciplinas_curso
+    def matriculados(self):
+        return self.__alunos
 
-    ### setter para a lista de objetos disciplina associadas ao curso
-    @disciplinas_curso.setter
-    def disciplinas_curso(self, disciplina):
-    	self.__disciplinas_curso.append(disciplina)
+    ### Setter para a lista de matrículas do curso, que adiciona
+    ### a matrícula recebida na lista de matriculas associadas
+    @matriculados.setter
+    def matriculados(self, matricula):
+        if matricula not in self.__alunos:
+    	    self.__alunos.append(matricula)
+        else:
+            pass
 
-    ### retorna o numero de alunos inscritos no curso
+    ### Retorna o número de alunos inscritos no curso
     @property
     def num_inscritos(self):
-    	alunos_matriculados = []
-    	for it in self.__disciplinas_curso:
-    		if it.aluno_associado not in alunos_matriculados:
-    			alunos_matriculados.append(it.aluno_associado)
-    	return len(alunos_matriculados)
+    	return len(self.__alunos)
 
-    ### verifica se a matricula é associada ao curso
-    def verifica_inscricao(self, num_aluno):
-        for it in self.__disciplinas_curso:
-        	if num_aluno == it.aluno_associado:
-        		return True
+    ### Retorna verdadeiro se a matricula recebida está 
+    ### na lista de matriculas inscritas no curso
+    def verifica_inscricao(self, matricula):
+        if matricula in self.__alunos:
+            return True
         return False
