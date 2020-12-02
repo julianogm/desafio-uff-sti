@@ -2,7 +2,7 @@
 
 Código para uma possível solução do desafio proposto pela STI - UFF.
 O desafio consiste em calcular o CR dos alunos de uma universidade, de acordo com critérios prédefinidos, a partir de um arquivo csv que contém a lista de notas desses alunos. Ao final do processo, deverá ser impresso na tela o CR de todos os alunos e qual a média de CR dos cursos.
-#### A linguagem utilizada foi python, na versão 3.8.
+#### A linguagem utilizada foi python, na versão 3.9.
 
 É utilizado o módulo pandas para facilitar a manipulação do csv. 
 É necessário instalar o módulo pandas caso haja a necessidade de executar o código localmente.
