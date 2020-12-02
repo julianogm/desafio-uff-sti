@@ -11,13 +11,12 @@ from modulos.ClassCurso import *
 ### As Classes sao Curso, Aluno e Disciplina
 def carregar_dados(pathfile):
 	f = pd.read_csv(pathfile)
-	materia = None
 	lista_alunos = []
 	lista_cursos = []
 	lista_disciplinas = []
 	aluno_atual = -1		### Variável para acessar o aluno mais recente da lista de alunos.
 
-	### Ordena o dataframe pela matricula (caso o .csv não estar ordenado)
+	### Ordena o dataframe pela matricula
 	f = f.sort_values('MATRICULA')
 
 	for index,row in f.iterrows():

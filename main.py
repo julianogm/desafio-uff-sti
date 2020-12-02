@@ -1,11 +1,10 @@
-from modulos.Desafio import *
-
 ### As funções utilizadas na main() estão no arquivo Desafio.py
+from modulos.Desafio import *
 
 def main():
 
 	### Gera as listas com os objetos referentes
-	alunos, cursos, disciplinas = carregar_dados("./dataset/notas.csv")
+	alunos, cursos, disciplinas = carregar_dados("./datasets/notas.csv")
 
 	print(" ------ O CR dos alunos é: ------ ")
 	print(" -------- aluno - CR ------------ ")
