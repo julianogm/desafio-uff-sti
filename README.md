@@ -1,6 +1,6 @@
 # Desafio UFF STI
 
-Código para uma possível solução para desafio proposto pela STI - UFF.
+Código para uma possível solução do desafio proposto pela STI - UFF.
 O desafio consiste em calcular o CR dos alunos de uma universidade, de acordo com critérios prédefinidos, a partir de um arquivo csv que contém a lista de notas desses alunos. Ao final do processo, deverá ser impresso na tela o CR de todos os alunos e qual a média de CR dos cursos.
 #### A linguagem utilizada foi python, na versão 3.8.
 
