@@ -30,7 +30,7 @@ O arquivo main é o arquivo principal que faz a chamada dos métodos necessário
 
 ### GUI
 Foi estruturado um outro arquivo, de forma semelhante ao arquivo principal, que imprime os dados em uma interface web (arquivo view).
-Para isso foi utilizado o micro framework web Flask que faz a conexão do retorno das funções dos módulos com a página web. A estrutura da página web foi feita de forma simplificada, separando em uma tabela com duas colunas, os dados impressos.
+Para isso foi utilizado o micro framework web Flask que faz a conexão do retorno das funções dos módulos com a página web. A estrutura da página web foi feita de forma simplificada, separando os dados impressos em uma tabela com duas colunas.
 
 A saída nesse caso é mostrada abaixo (clique na imagem para abrir o site).
 
