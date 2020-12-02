@@ -10,6 +10,7 @@ O desafio consiste em calcular o CR dos alunos de uma universidade, de acordo co
 ```sh
 $ pip install pandas
 ```
+Nesse caso foi utilizado o instalador de pacotes pip.
 
 ### Estrutura
 Os módulos foram divididos em Classes de Aluno, Disciplina e Curso, e um módulo de funções, além do arquivo main.
